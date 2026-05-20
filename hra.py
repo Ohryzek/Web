@@ -136,7 +136,7 @@ def ziskej_verdikt():
     else: 
         return "Střílíš úplně po všem!"
 
-# --- HLAVNÍ SMYČKA ---
+# --- HLAVNÍ SMYČKA --
 running = True
 while running:
     screen.fill((30, 39, 46))
