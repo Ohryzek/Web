@@ -255,7 +255,7 @@ while running:
     screen.blit(kurzor_img, (stred_kurzoru_x, stred_kurzoru_y))
 
     pygame.display.flip()
-    clock.tick(60)
+    clock.tick(60) 
 
 pygame.quit()
 sys.exit()
