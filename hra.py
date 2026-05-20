@@ -116,15 +116,25 @@ def vytvor_cil():
     return {"typ": typ, "rect": pygame.Rect(x, y, 100, 100), "stav": "ZIVA", "cas_smrti": 0, "cas_zrozeni": pygame.time.get_ticks()}
 
 def ziskej_verdikt():
-    if sum(ulovky.values()) == 0: return "Wow, buď jsi zapomněl jak hrát anebo si true pacifist nebo učitel"
+    if sum(ulovky.values()) == 0: 
+        return "Wow, buď jsi zapomněl jak hrát\nanebo jsi true pacifist nebo učitel"
+        
     nejvice = max(ulovky, key=ulovky.get)
-    if nejvice == "izp": return "No nandal jsi to IZPéčku, jsi opravdu true fan of IZP"
-    elif nejvice == "maslo": return "PEANUT! Buď nejíš maso anebo máš brutální alergii jak Béďa. Víš co je dobré."
-    elif nejvice == "hokej": return "Gól! Buď chceš střílet jako Pastrňák anebo jsi průměrný český fanoušek hokeje."
-    elif nejvice == "banan": return "Banán, tvoje guilty pleasure... Jsi buď velký gurmán exotiky anebo ezo maniak."
-    elif nejvice == "krokodyl": return "Krokodýl, tvůj největší broski. Jsi buď lovcem anebo zaměstnancem ZOO u Vinotéky u hada."
-    elif nejvice == "veverka": return "Zase samé veverky. Jsi buď žhář Českého Švýcarska anebo prostě rád týráš zvířata"
-    else: return "Střílíš úplně po všem!"
+    
+    if nejvice == "izp": 
+        return "No nandal jsi to IZPéčku,\njsi opravdu true fan of IZP"
+    elif nejvice == "maslo": 
+        return "PEANUT! Buď nejíš maso anebo máš\nbrutální alergii jak Béďa. Víš co je dobré."
+    elif nejvice == "hokej": 
+        return "Gól! Buď chceš střílet jako Pastrňák\nanebo jsi průměrný český fanoušek hokeje."
+    elif nejvice == "banan": 
+        return "Banán, tvoje guilty pleasure...\nJsi velký gurmán exotiky anebo ezo maniak."
+    elif nejvice == "krokodyl": 
+        return "Krokodýl, tvůj největší broski. Jsi buď lovcem\nanebo zaměstnancem ZOO u Vinotéky u hada."
+    elif nejvice == "veverka": 
+        return "Zase samé veverky. Jsi buď žhář\nČeského Švýcarska anebo prostě rád týráš zvířata"
+    else: 
+        return "Střílíš úplně po všem!"
 
 # --- HLAVNÍ SMYČKA ---
 running = True
